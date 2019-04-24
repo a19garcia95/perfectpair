@@ -8,7 +8,47 @@
 	
 
 
-	<h1>GENDER</h1>
+	<!--<h1>GENDER</h1>-->
+
+	
+
+
+
+	
+
+	{% for product in products %}
+
+
+		
+
+			<div class="container">
+				<div class="card" style="width: 18rem;">
+			
+				  <div class="card-body">
+				    <h5 class="card-title">{{product.name}}</h5>
+				    <p class="card-text">Type: {{product.style}}</p>
+				    <p class="card-text">ID: {{product.id}}</p>
+				    <p class="card-text">Size: {{product.size}}</p>
+				    <p class="card-text">${{product.price}}</p>
+				    <p class="card-text">Only {{product.stock}} available</p>
+				    <p class="card-text">Only {{product.availability}}</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <input id="apto" type="checkbox">
+				   	<label for="apto">Liked</label>
+				  </div>
+				</div>
+			</div>
+
+		
+
+
+
+	{% endfor %}
+
+
+
+
+
 
 
 	{% for shoe in shoe_list %}
@@ -39,6 +79,8 @@
 
 
 	{% endfor %}
+
+
 
 
 

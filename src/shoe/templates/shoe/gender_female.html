@@ -1,4 +1,6 @@
+
 {% include "base.html" %}
+
 
 
 
@@ -7,8 +9,50 @@
 {% block content %}
 	
 
+<form method="GET" action=''>
+<input type="text" name='q' placeholder="Search posts" value='{{ request.GET.q}}'/>
+<input type="submit" value="Search"/>
+
+
+</form>	
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<h1>GENDER</h1>
+{% load fontawesome %}
+
+<head>
+  {% fontawesome_stylesheet %}
+  {% fontawesome_icon 'fas fa-cart-plus' color='black' %}
+  
+  
+</head>
+
+
+<div style="font-size: 24px;">
+	{% fontawesome_icon 'fas fa-user fa-10x' color='black' %}
+</div>
+
+
+{% fontawesome_icon 'star' large=True spin=True %}
+
+<ul class="fa-ul">
+   <li> {% fontawesome_icon 'home' rotate=90 li=True %} One</li>
+</ul>
+
+
+
+
 
 
 	{% for shoe in shoe_list %}
@@ -42,3 +86,6 @@
 
 
 {% endblock %}
+
+
+

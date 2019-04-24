@@ -22,12 +22,16 @@ from django.conf.urls.static import static
 
 from .views import home
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', home, name='home'),
     path('shoe/', include('shoe.urls', namespace='shoe')),
+    path('cart/', include('cart.urls', namespace='cart')), 
+    
 
 ]
+
 
 
 

@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'shoe'
 
 urlpatterns = [
@@ -9,5 +10,7 @@ urlpatterns = [
     path('cart_list', views.cart_list, name="cart_list"),
    	path('gender_male', views.gender_male, name="gender_male"),
    	path('gender_female', views.gender_female, name="gender_female"),
+   	path('s', views.search, name="search"),
+   
 
 ]

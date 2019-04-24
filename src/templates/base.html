@@ -11,92 +11,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{% block title %}Hello, world!{% endblock title%}</title>
+    <title></title>
     <!-- Bootstrap CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
   </head>
   <body>
+
+
     
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" id='xyz' href="">Perfect Pair</a>
-      
-
-
-
-
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
 
       <form class="form-inline my-2 my-lg-0" action='/shoe/s'>
-        <input class="form-control mr-sm-2" type="search" name='q' placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for Products</button>
+          <input class="form-control mr-sm-2" type="search" name='q' placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for Products</button>
       </form>
-
     
+        <a class="navbar-brand" id='xyz' href="">Perfect Pair</a>
+  
 
-
-
-
-
-
-
-
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Your Profile<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'shoe:liked_list' %}">Liked</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'shoe:cart_list' %}" tabindex="-1">Cart</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'shoe:cart_list' %}" tabindex="-1">Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  </div>
-
-
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="header1">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Your Profile<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="{% url 'shoe:liked_list' %}">Liked</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us (Maybe New Arrivals or Men/Women or Inspiration</a>
+            <a class="nav-link" href="{% url 'shoe:cart_list' %}" tabindex="-1">Cart</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Shop
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{% url 'shoe:gender_male' %}">Men</a>
-              <a class="dropdown-item" href="{% url 'shoe:gender_female' %}">Women</a>
-              
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shoe:cart_list' %}" tabindex="-1">Login</a>
           </li>
         </ul>
       </div>
     </nav>
-  </div>
 
+  
+
+
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container" id="secondnav">  
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us (Maybe New Arrivals or Men/Women or Inspiration</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Shop
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'shoe:gender_male' %}">Men</a>
+                  <a class="dropdown-item" href="{% url 'shoe:gender_female' %}">Women</a>
+                  
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+
+
+  
 
 
 
@@ -108,6 +103,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+
+
+
   </body>
 </html>
 

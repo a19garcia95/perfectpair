@@ -32,8 +32,18 @@ def liked_list(request):
 
 
 def cart_list(request):
+    	
+	system = request.POST.get('cart', None)
 
-	return render(request, 'shoe/cart_list.html', {})
+	shoe_list = Shoe.objects.all()
+	
+	context = {
+		'shoe_list': shoe_list,
+		'system': system,
+		
+	}
+
+	return render(request, 'shoe/cart_list.html', context)
 
 
 
@@ -89,8 +99,176 @@ def add_to_cart(request, shoe_id):
 
 	return render(request, template, context)
 
+def new_arrivals(request):
+	template = ''
+	context = {}
+
+	return render(request, template, context)
 
 
+def sidebar(request):
+	template = 'shoe/sidebar.html'
+	context = {}
+
+	return render(request, template, context)
+
+
+def men_sneakers(request):
+    	
+	shoe_list = Shoe.objects.all()
+
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	template = 'shoe/men_sneakers.html'
+	
+
+	return render(request, template, context)
+
+
+def men_business(request):
+    	
+	shoe_list = Shoe.objects.all()
+
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	template = 'shoe/men_business.html'
+	
+
+	return render(request, template, context)
+
+
+def men_casual(request):
+    	
+	shoe_list = Shoe.objects.all()
+
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	template = 'shoe/men_casual.html'
+	
+
+	return render(request, template, context)
+
+
+def men_boots(request):
+    	
+
+	system = request.POST.get('cart', None)
+
+	shoe_list = Shoe.objects.all()
+	
+	context = {
+		'shoe_list': shoe_list,
+		'system': system,
+		
+	}
+
+	template = 'shoe/men_boots.html'
+	return render(request, template, context)
+
+
+def men_sandals(request):
+    
+	template = 'shoe/men_sandals.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+	
+
+	return render(request, template, context)
+
+
+def women_sneakers(request):
+	template = 'shoe/women_sneakers.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def women_flats(request):
+	template = 'shoe/women_flats.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def women_pumps(request):
+	template = 'shoe/women_pumps.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def women_boots(request):
+	template = 'shoe/women_boots.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def women_sandals(request):
+	template = 'shoe/women_sandals.html'
+	shoe_list = Shoe.objects.all()
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def new_arrivals(request):
+	template = 'shoe/new_arrivals.html'
+	shoe_list = Shoe.objects.all()
+	
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+def like(request):
+	template = 'shoe/like.html'
+	shoe_list = Shoe.objects.all()
+	
+	context = {
+
+		'shoe_list': shoe_list,
+	}
+
+	return render(request, template, context)
+
+
+
+    	
 
 
 

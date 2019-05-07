@@ -9,7 +9,7 @@
 
 #header1 {
 	position: relative;
-	left: 800px;
+	left: 700px;
 }
 
 
@@ -54,3 +54,7 @@ i[class='fab fa-linkedin fa-lg'] {
 }
 
 
+#z1 {
+	position: relative;
+	left: 300px;
+}
